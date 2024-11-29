@@ -1,0 +1,204 @@
+/*About:
+Q What is PHP?
+
+Ans: 
+PHP (recursive acronym for PHP: Hypertext Preprocessor). It's a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+
+# Functionalities:
+1. It's a Loosely typed language.
+2. It's a scripting language.
+3. It can be directly embedded into html and perform different operation, for which we have to write complex code in js separately.
+4. It's open source
+5. PHP is that it is extremely simple for a newcomer, but offers many advanced features for a professional programmer.
+6. It's more than just a CGI(Common Gateway Interface) program, as it can do, such as collect form data, generate dynamic page content, or send and receive cookies. But PHP can do much more.
+
+#Comparision:
+1. Instead of lots of commands to output HTML (as seen in C or Perl), PHP pages contain HTML with embedded code.
+2. Easier to  implement scripts directly with html code, even within tags, unlike js where we need to write them separately then integrate them
+3. Have some similar features like the js libraries React, like 
+a) importing components we import files here
+b) accessing values using different methods in js we use $_ arrays like $_GLOBALS, $_POST, $_GET, _$REQUEST, etc.
+c) Element hiding features like in react when we manipulate DOM element by 
+js code with html, we can do the same here just in .php file without installing all those libraries
+etc.
+
+#Working:
+1. The PHP code is enclosed in special start and end processing instructions <?php and ?> that allow jumping in and out of PHP mode.
+2. What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was.
+3. It can run in both Server-side as well as in command-line:
+a) Server-side Scripting:
+	It requires: (i) The PHP parser (CGI or server module), (ii) a web server, and (iii) a web browser.
+
+
+
+*/
+
+/* Basics:
+
+# Q What is PHP?
+~> Ans: PHP (recursive acronym for PHP: Hypertext Preprocessor). It's a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+
+
+# Static Website: Whose data or layout won't change according to user  eg. W2schools, Wikipedia,etc 
+# Dynamic Website: Whose data or layout will change according to user 
+
+
+# Functionalities:
+~> PHP stands for Hypertext Preprocessors
+~> PHP- Personal Home Page
+~> PHP is a server site language
+~> PHP is a loosely typed language.
+~> PHP is an interpreter language
+        it's interpreted in the server and result is sent back to the client in html.
+~> Extension for PHP is .PHP
+~> About the logo:   ele"PHP"ant.
+~> PHP is an open source language.
+~> PHP is case sensitive 
+    when it comes to names, 
+    but not for commands(keywords), like echo,Echo and ECHO work in same way.
+    .i.e, keywords, classes, functions, and user-defined functions are not case-sensitive.
+~> PHP is portable: It can run on any platform.
+~> PHP is a scripting language.
+~> PHP is faster than other scriting languages
+~> PHP Keyword is not case sensitive, but the variables are case sensitive.
+~> PHP uses POP(procedural oriented programming) or OOP(object-oriented programming), or a mixture of them both.
+~> PHP is its support for a wide range of databases.
+~> Written mostly or always inside html. 
+        it can be directly embedded into html and perform different operation, for which we have to write complex code in js separately.
+~> PHP is extremely simple for a newcomer, but offers many advanced features for a professional programmer.
+~> PHP is more than just a CGI(Common Gateway Interface) program, as it can do, such as collect form data, generate dynamic page content, or send and receive cookies. But PHP can do much more.
+    PHP works as either a module, or as a CGI processor.
+
+# Comparision:
+~> Instead of lots of commands to output HTML (as seen in C or Perl), PHP pages contain HTML with embedded code.
+~> PHP is designed specifically to be a more secure language for writing CGI programs than Perl or C, and with correct selection of compile-time and runtime configuration options, and proper coding practices, it can give you exactly the combination of freedom and security you need.
+~> Easier to  implement scripts directly with html code, even within tags, unlike js where we need to write them separately then integrate them
+~> Have some similar features like the js libraries React, like 
+    1. importing components we import files here
+    2. accessing values using different methods in js we use $_ arrays like $_GLOBALS, $_POST, $_GET, _$REQUEST, etc.
+    3. Element hiding features like in react when we manipulate DOM element by 
+        js code with html, we can do the same here just in .php file without installing all those libraries
+    etc.
+~> PHP has support for instantiation of Java objects and using them transparently as PHP objects.
+~> PHP has useful text processing features, which includes the Perl compatible regular expressions (PCRE).
+~> PHP standardizes all of the XML extensions on the solid base of libxml2, and extends the feature set adding SimpleXML, XMLReader and XMLWriter support.
+~> PHP is not limited to outputting HTML. 
+    PHP's abilities include outputting rich file types, such as images or PDF files, encrypting data, and sending emails. 
+    It can also output easily any text, such as JSON or XML. 
+    PHP can autogenerate these files, and save them in the file system, instead of printing it out, forming a server-side cache for dynamic content.
+
+# Working:
+~> The PHP code is enclosed in special start and end processing instructions <?php and ?> that allow jumping in and out of PHP mode.
+~> What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was.
+~> It can run in both Server-side as well as in command-line:
+1. Server-Side Scripting:
+	It requires: (i) The PHP parser (CGI or server module), (ii) a web server, and (iii) a web browser.
+2. Command Line Scripting:
+    It can be run without any server or browser, only the PHP parser is needed to use it this way.
+    This type of usage is ideal for scripts regularly executed using cron (on Unix or macOS) or Task Scheduler (on Windows).
+    These scripts can also be used for simple text processing tasks.
+
+
+~> Commands to run php on XAMPP Server using cli:
+    Method 1:
+        php -S localhost:8000 /path/to/your/php/file.php
+    Method 2:
+        Using Node.js and a PHP-to-HTML compiler like Dominate**
+            If you have Node.js installed, you can use a package like Dominate to compile your PHP files into HTML and serve them using Node's built-in HTTP server. Here's how:
+
+            First, install Dominate: npm install dominate
+            Then, create a new file called `server.js` with the following code:
+                ```javascript
+                    const http = require('http');
+                    const dom = require('dominate');
+
+                    http.createServer((req, res) => {
+                    const phpFile = 'path/to/your/php/file.php';
+                    const html = dom.compile(phpFile);
+                    res.writeHead(200, {'Content-Type': 'text/html'});
+                    res.end(html);
+                    }).listen(3000);
+                ```
+            Replace `path/to/your/php/file.php` with the actual path to your PHP file. Then, run the server:
+            ```bash
+                node server.js
+            ```
+            Open a web browser and navigate to `http://localhost:3000`. Your PHP file should be rendered in the browser.
+            These are just a few options for serving your PHP files directly from the command line and having them render in your web browser.
+
+~> Steps to write a PHP code: 
+    Got to: In C drive / XAMPP / htdocs / 
+    Create new Project folder: eg. PHPfolder
+    Open in code editor
+    Open in code editor
+
+
+
+~> 3 things are needed in PC to run PHP in my device:
+    1. PHP Engine
+    2. Apache Web server
+    3. Database Server
+    OR A Package: XAMPP Server
+    Editor is required as , eg. vs code, notepad++, atom, etc.
+
+~> Syntax:
+    Opening PHP Tag:    <?
+    PHP Tag:            php
+    Code:               ...     eg. echo"Hello World!!!";
+    End of statement:   ;
+    Closing PHP Tag:    ?>
+
+    <?php echo"Hello World!!!";?>
+
+
+~> To run the code:
+    1. Go to XAMPP control panel
+    2. Turn on Apache and MySQL
+    3. Go to localhost in the browser (no port)
+    4. Navigate to the file from localhost browser
+
+
+
+~> it uses port number 80 (as default value)
+~> apache is neede to be turned on to run php
+~> apache needs to be stopped in order to make the localhost work for other things.
+~> this command can run php from anywhere in the device just need the required services(like server, database, etc.) to be present in the device globally.
+*/
+
+~> echo phpversion(); // To check the PHP version
+
+/* Variable declaration:
+    $variable_name = value;
+    // variable_names are case sensitive
+    // Naming Conventions:   1) Starts with $
+                             2) it should only contain a_z or A-Z or 0-9 or _;
+                             3) don't start with a number
+*/
+
+/* Defining constants:
+    Method 1:
+        define("name",value);
+        // it make the variable global
+
+        // use name not $name while printing
+    Method 2:
+        const $name = value;
+*/
+
+/* Datatypes:
+    Integer
+    Float
+    String
+    Booleans
+    Array
+    Object
+    NULL
+
+    // just like JavaScript we don't need to mention the datatype, as it will automatically analyze assign it like in Py and Js 
+
+    var_dump($var_name);  // tells the datatype of the variable
+
+
+// ~> Sequential flow: Flow of the overall program;
+// ~> control flow: Controlling the flow of codde execution with the help of (conditionals, loops, jumping statements, goto statements,etc.)
+// ~> Conditional flow: Flow of the program based on the condition;

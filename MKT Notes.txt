@@ -1,0 +1,16 @@
+RFM: Recency(How recently), Frequency(How frequently they buy), Monetary(How many time they have made transaction)
+
+eg. Customer 
+
+
+
+4 P's of marketing:
+Product 
+Price
+Place
+Promotion
+
+
+Core layer: TAngeble-> main purpose
+TAngeble layer: color of Product
+Aumented layer: Color of ink (for a marker)

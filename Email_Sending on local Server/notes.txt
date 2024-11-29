@@ -1,0 +1,14 @@
+1) install exe file from: https://github.com/mailhog/MailHog/releases
+
+2) download: MailHog_windows_386.exe
+
+3) go to: C:xmapp\htdocs\php\php.ini    (or php file of type configuration settings file)
+
+4) search "mail function"
+
+5) change the port to 1025
+
+6) Reopen everything 
+
+7) go to localhost:8025 to check mailHog Server
+    also run the php file to get the message that if th email is sent or not.
